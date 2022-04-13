@@ -4,16 +4,17 @@ import {createStackNavigator, TransitionPresets } from "@react-navigation/stack"
 import SearchScreen from "../screens/SearchScreen";
 import SearchResultScreen from "../screens/SearchResultScreen";
 
-const Client = createStackNavigator();
+const ClientSearch = createStackNavigator();
 
 
 export default function ClientStack (){ 
     return(
-        <Client.Navigator>
-            <Client.Screen
+        <ClientSearch.Navigator>
+            <ClientSearch.Screen
                 name="HomeScreen"
+                component={Home}
             />
-        </Client.Navigator>
+        </ClientSearch.Navigator>
     )
 }
 
