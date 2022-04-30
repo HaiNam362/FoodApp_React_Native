@@ -28,7 +28,7 @@ export default function AuthStack() {
                     ...TransitionPresets.RevealFromBottomAndroid
                 }}
             />
-             <Auth.Screen
+            <Auth.Screen
                 name="DrawerNavigator"
                 component={DrawerNavigator}
                 options={{

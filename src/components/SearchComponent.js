@@ -109,7 +109,7 @@ export default function SearchComponent() {
                         renderItem={({ item }) => (
                             <TouchableOpacity onPress={() => {
                                 Keyboard.dismiss
-                                navigation.navigate("", { item: item.name })
+                                navigation.navigate("SearchResultScreen", { item: item.name })
                                 setmodalVisible(false)
                                 setTextInputFossued(true)
                             }}>

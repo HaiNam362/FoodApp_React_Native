@@ -6,7 +6,7 @@ import { filterData2 } from '../global/Data';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
-export default function SearchScreen() {
+export default function SearchScreen({navigation}) {
      return (
           <View style={styles.container}>
                {/* <Text>SearchScreen</Text> */}
@@ -19,7 +19,7 @@ export default function SearchScreen() {
                               keyExtractor={item => item.id}
                               renderItem={({ item, index }) => (
                                    <TouchableWithoutFeedback onPress={() => (
-                                        navigation.navigate("", { item: item.name })
+                                        navigation.navigate("SearchResultScreen", { item: item.name })
                                    )}>
                                         <View style={styles.imageView}>
                                              <ImageBackground
@@ -54,7 +54,7 @@ const Footer = () => {
                          keyExtractor={item => item.id}
                          renderItem={({ item, index }) => (
                               <TouchableWithoutFeedback onPress={() => {
-                                   navigation.navigate("", { item: item.name })
+                                   navigation.navigate("SearchResultScreen", { item: item.name })
                               }}>
                                    <View style={styles.imageView}>
                                         <ImageBackground style={styles.image} source={{ uri: item.image }}>

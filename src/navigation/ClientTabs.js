@@ -8,6 +8,7 @@ import SearchScreen from '../screens/SearchScreen';
 import MyOrdersScreen from '../screens/MyOrdersScreen';
 import MyAccountScreen from '../screens/MyAccountScreen';
 import RestaurantsMapScreen from '../screens/RestaurantsMapScreen';
+import { clientStack } from './ClientStack';
 
 
 const ClientTabs = createBottomTabNavigator();
@@ -39,7 +40,7 @@ export default function RootClientTabs() {
             />
             <ClientTabs.Screen
                 name="SearchScreen"
-                component={SearchScreen}
+                component={clientStack}
                 options={
                     {
                         headerShown: false,

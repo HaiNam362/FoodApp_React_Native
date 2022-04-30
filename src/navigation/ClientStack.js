@@ -7,12 +7,26 @@ import SearchResultScreen from "../screens/SearchResultScreen";
 const ClientSearch = createStackNavigator();
 
 
-export default function ClientStack (){ 
+export  function clientStack (){ 
     return(
         <ClientSearch.Navigator>
             <ClientSearch.Screen
-                name="HomeScreen"
-                component={Home}
+                name="SearchScreen"
+                component={SearchScreen}
+                options={
+                    ()=> ({
+                        headerShown: false,
+                    })
+                }
+            />
+            <ClientSearch.Screen
+                name="SearchResultScreen"
+                component={SearchResultScreen}
+                options={
+                    ()=> ({
+                        headerShown: false,
+                    })
+                }
             />
         </ClientSearch.Navigator>
     )
